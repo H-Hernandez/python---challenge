@@ -14,4 +14,5 @@ with open(csvpath, newline="") as csvfile:
     for rows in budget_reader:
         budget_date.append(rows[0])
     
-    print("Total months ", len(budget_date))
+    print("Total months:", len(budget_date))
+
