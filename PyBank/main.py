@@ -7,10 +7,11 @@ print(csvpath)
 
 
 with open(csvpath, newline="") as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=",")
-    csvreader = next(csvreader)
-    months = []
+    budget_reader = csv.reader(csvfile, delimiter=",")
+    budget_header = next(budget_reader)
+    budget_date=[]
 
-    for rows in csvreader:
-        months.append(rows[0])
-        print(months)
+    for rows in budget_reader:
+        budget_date.append(rows[0])
+    
+    print("Total months ", len(budget_date))
