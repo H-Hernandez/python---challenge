@@ -47,7 +47,9 @@ with open(csvpath, newline="") as csvfile:
 diff_list = diff
 sum (diff_list)
 diff_sum = sum (diff_list)   
+diff_avg = diff_sum / len(diff_list)
 print(diff_sum)
+print(diff_avg)
     
 
         
