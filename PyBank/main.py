@@ -39,12 +39,15 @@ with open(csvpath, newline="") as csvfile:
     budget_reader = csv.reader(csvfile, delimiter=",")
     budget_header = next(budget_reader)
     profit_loss = []
-    
+    diff_list = []
     for rows in budget_reader:
         profit_loss.append(int(rows[1]))
     diff = [profit_loss[i+1] - profit_loss[i] for i in range(len(profit_loss)-1)]
     
-print(diff)
+diff_list = diff
+sum (diff_list)
+diff_sum = sum (diff_list)   
+print(diff_sum)
     
 
         
