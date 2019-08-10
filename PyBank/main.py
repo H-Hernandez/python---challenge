@@ -32,8 +32,7 @@ with open(csvpath, newline="") as csvfile:
     net_total = sum (budget_num)
 #print successfull
     print(f'Total: $ {net_total}')
-    #diff = [budget_num[i] - budget_num[i+1] for i in range(len(budget_num)]
-    #print(diff)
+
 
 with open(csvpath, newline="") as csvfile:
     budget_reader = csv.reader(csvfile, delimiter=",")
@@ -46,10 +45,16 @@ with open(csvpath, newline="") as csvfile:
     
 diff_list = diff
 sum (diff_list)
+max (diff_list)
+min(diff_list)
 diff_sum = sum (diff_list)   
 diff_avg = diff_sum / len(diff_list)
+diff_max = max(diff_list)
+diff_min = min(diff_list)
 print(diff_sum)
 print(diff_avg)
+print(diff_max)
+print(diff_min)
     
 
         
