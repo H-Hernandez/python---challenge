@@ -13,7 +13,7 @@ with open(csvpath, newline="") as csvfile:
     budget_date=[]
     for rows in budget_reader:
         budget_date.append(rows[0])
-    
+    # below code prints out the total months
     print("Total months:", len(budget_date))
 
 with open(csvpath, newline="") as csvfile:
@@ -31,9 +31,9 @@ with open(csvpath, newline="") as csvfile:
 # I'm setting a variable (net_total) to equal sum (budget_num)
     net_total = sum (budget_num)
 #print successfull
-    print(f'Total: $ {net_total}')
+    print(f'Total: ${net_total}')
 
-
+#duplicating the csv reader to calculate the amounts required in the HW.
 with open(csvpath, newline="") as csvfile:
     budget_reader = csv.reader(csvfile, delimiter=",")
     budget_header = next(budget_reader)
@@ -43,19 +43,18 @@ with open(csvpath, newline="") as csvfile:
         profit_loss.append(int(rows[1]))
     diff = [profit_loss[i+1] - profit_loss[i] for i in range(len(profit_loss)-1)]
     
+
 diff_list = diff
 sum (diff_list)
 max (diff_list)
 min(diff_list)
 diff_sum = sum (diff_list)   
-diff_avg = diff_sum / len(diff_list)
+diff_avg = round(diff_sum / len(diff_list),2)
 diff_max = max(diff_list)
 diff_min = min(diff_list)
-print(diff_sum)
-print(diff_avg)
-print(diff_max)
-print(diff_min)
-    
 
-        
-    
+print(f'Average Change: ${diff_avg}')
+print(f'Max Amount: ${diff_max}')
+print(f'Min Amount: ${diff_min}')
+      
+
